@@ -31,9 +31,9 @@ const Login = () => {
 
   const onSubmit = () => {
     if(isValid) {
-      console.log('Está apto a loga!')
+      console.log('Está apto a logar!')
     } else {
-      console.log('Não está apto a loga!')
+      console.log('Não está apto a logar!')
     }
   }  
 
@@ -46,6 +46,7 @@ const Login = () => {
           <Spacing />
           <Input
             name="email"
+            type="text"
             placeholder="E-mail"
             control={control}
             errorMessage={errors?.email?.message}
