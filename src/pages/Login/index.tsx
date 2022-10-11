@@ -32,39 +32,37 @@ const Login = () => {
   const onSubmit = () => {
     if(isValid) {
       console.log('Está apto a logar!')
-    } else {
-      console.log('Não está apto a logar!')
     }
   }  
 
   return (
-    <Container>
-      <LoginContainer>
-        <Column>
-        <form onSubmit={handleSubmit(onSubmit)}></form>
-          <Title>Login</Title>
-          <Spacing />
-          <Input
-            name="email"
-            type="text"
-            placeholder="E-mail"
-            control={control}
-            errorMessage={errors?.email?.message}
-          />
-          <Spacing />
-          <Input
-            name="password"
-            type="password"
-            placeholder="Senha"
-            control={control}
-            errorMessage={errors?.password?.message}
-          />
-          <Spacing />
-          <Button title="Entrar" type="submit"/>
-          <form/>
-        </Column>
-      </LoginContainer>
-    </Container>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Container>      
+        <LoginContainer>
+          <Column>        
+            <Title>Login</Title>
+            <Spacing />
+            <Input
+              name="email"
+              type="text"
+              placeholder="E-mail"
+              control={control}
+              errorMessage={errors?.email?.message}
+            />
+            <Spacing />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Senha"
+              control={control}
+              errorMessage={errors?.password?.message}
+            />
+            <Spacing />
+            <Button title="Entrar" type="submit"/>          
+          </Column>
+        </LoginContainer>      
+      </Container>
+    </form>
   );
 };
 
